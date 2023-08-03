@@ -1,0 +1,40 @@
+
+<div class="contenedor-p">
+
+  <div class="contenedor-t">
+    <button class="button" routerLink="/table/register"> Agrega tus datos! </button>
+    <table class="styled-table">
+
+      <thead class="">
+        <tr>
+          <th class="">ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Telefono</th>
+          <th>Pais</th>
+          <th>Ciudad</th>
+          <th>Profesion</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let data of records" class="tr-p">
+          <th> {{ data.id        }}  </th>
+          <td> {{ data.nombre    | titlecase  }}  </td>
+          <td> {{ data.apellido  | titlecase  }}  </td>
+          <td> {{ data.telefono  | titlecase  }}  </td>
+          <td> {{ data.pais      | titlecase  }}  </td>
+          <td> {{ data.ciudad    | titlecase  }}  </td>
+          <td> {{ data.profesion | titlecase  }}  </td>
+          <td>
+            <button class="btn btn-1" (click)="deleteData(data.id)"> <i class="fa-solid fa-trash" style="color: #685cd4;"></i>  </button>
+            <button class="btn btn-1 " [routerLink]="['/table/edit',data.id]"> <i class="fa-regular fa-pen-to-square" style="color: #685cd4;"></i> </button></td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+
+</div>

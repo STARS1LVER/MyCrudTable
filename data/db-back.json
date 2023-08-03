@@ -1,0 +1,22 @@
+{
+  "registro": [
+    {
+      "id": 1,
+      "nombre": "Diego",
+      "apellido": "Cardenas",
+      "telefono": "3044711958",
+      "pais":  "Colombia",
+      "ciudad": "Barranquilla",
+      "profesion": "Ingeniero"
+    },
+    {
+      "id": 2,
+      "nombre": "Martin",
+      "apellido": "llanos",
+      "telefono": "3006754123",
+      "pais": "españa",
+      "ciudad": "Madrid",
+      "profesion": "doctor"
+    }
+  ]
+}

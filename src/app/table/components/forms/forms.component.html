@@ -1,0 +1,46 @@
+<div class="contenedor-p">
+  <div class="form-p">
+    <form autocomplete="off" class="" [formGroup]="dataForm"  (ngSubmit)="onSubmit()">
+
+      <h2 *ngIf="!obtenerDatos.id" class="p-2 title-r">Ingresa tus datos</h2>
+
+      <ng-template [ngIf]="obtenerDatos.id">
+        <h2 class="p-2 title-r">Edita tus datos</h2>
+      </ng-template>
+
+      <div class="contenedor-input">
+        <div class="me-1">
+          <input formControlName="nombre" type="text" class="form-control m-2 input-1" placeholder="Nombre" />
+          <input formControlName="apellido" type="text" class="form-control m-2 input-2" placeholder="Apellido" />
+        </div>
+
+        <div class="me-1">
+          <input formControlName="telefono" type="text" class="form-control m-2 input-1" placeholder="Telefono" />
+          <input formControlName="pais" type="text" class="form-control m-2 input-2" placeholder="Pais" />
+        </div>
+
+        <div class="me-1 ">
+          <input formControlName="ciudad" type="text" class="form-control m-2 input-3" placeholder="Ciudad" />
+        </div>
+
+        <div>
+          <input formControlName="profesion" type="text" class="form-control m-2 input-3" placeholder="Profesion" />
+        </div>
+      </div>
+
+
+
+    </form>
+
+    <div class="buttons2">
+
+      <button class="noselect  btn-delete" (click)="onSubmit()" ><span class="text">Guardar</span><span class="icon"> <i class="fa-solid fa-floppy-disk fa-lg" style="color: #ffffff;"></i> </span></button>
+
+      <ng-template [ngIf]="obtenerDatos.id" >
+        <button class="noselect  btn-delete" (click)="onConfirmDelete()" ><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+
+      </ng-template>
+    </div>
+  </div>
+
+</div>
